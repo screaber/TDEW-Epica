@@ -1,0 +1,2 @@
+module DetallePichangasHelper
+end

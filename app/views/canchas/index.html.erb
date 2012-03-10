@@ -1,0 +1,26 @@
+<h1>Canchas</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @canchas.each do |cancha| %>
+      <tr>
+        <td><%= cancha.id %></td>
+        <td><%= link_to cancha.nombre, cancha_path(cancha) %></td>
+        <td><%= cancha.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_cancha_path(cancha), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', cancha_path(cancha), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_cancha_path, :class => 'btn btn-primary' %>

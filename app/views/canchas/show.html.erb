@@ -1,0 +1,37 @@
+<h1>Cancha</h1>
+
+<p>
+  <b>Nombre</b><br>
+  <%= @cancha.nombre %>
+</p>
+
+<p>
+  <b>Direccion</b><br>
+  <%= @cancha.direccion %>
+</p>
+
+<p>
+  <b>Latitud</b><br>
+  <%= @cancha.latitud %>
+</p>
+
+<p>
+  <b>Longitud</b><br>
+  <%= @cancha.longitud %>
+</p>
+
+<p>
+  <b>Foto</b><br>
+  <%= @cancha.foto %>
+</p>
+
+<p>
+  <b>Iddistrito</b><br>
+  <%= @cancha.iddistrito %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', canchas_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_cancha_path(@cancha), :class => 'btn' %>
+  <%= link_to 'Delete', cancha_path(@cancha), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

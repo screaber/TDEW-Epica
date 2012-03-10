@@ -1,0 +1,66 @@
+<%= form_for @pichanga, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Pichanga</legend>
+
+    <div class="control-group">
+      <%= f.label :titulo, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :titulo, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :nroJugador, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :nroJugador, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :PrecioCancha, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :PrecioCancha, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :FechaInicio, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.datetime_select :FechaInicio, :class => 'datetime_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :FechaFin, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.datetime_select :FechaFin, :class => 'datetime_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :comentario, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :comentario, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :idusuario, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :idusuario, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :estado, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :estado, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', pichangas_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

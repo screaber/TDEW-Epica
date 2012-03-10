@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  idpichanga: 1
+  idusuario: 1
+  montoJugador: 1
+  flagParticipo: false
+
+two:
+  idpichanga: 1
+  idusuario: 1
+  montoJugador: 1
+  flagParticipo: false

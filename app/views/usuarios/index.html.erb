@@ -1,0 +1,26 @@
+<h1>Usuarios</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.id %></td>
+        <td><%= link_to usuario.nombre, usuario_path(usuario) %></td>
+        <td><%= usuario.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_usuario_path(usuario), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', usuario_path(usuario), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_usuario_path, :class => 'btn btn-primary' %>

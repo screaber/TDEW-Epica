@@ -1,0 +1,52 @@
+<%= form_for @cancha, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Cancha</legend>
+
+    <div class="control-group">
+      <%= f.label :nombre, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :nombre, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :direccion, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :direccion, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :latitud, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :latitud, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :longitud, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :longitud, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :foto, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :foto, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :iddistrito, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :iddistrito, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', canchas_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

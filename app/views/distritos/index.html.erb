@@ -1,0 +1,26 @@
+<h1>Distritos</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @distritos.each do |distrito| %>
+      <tr>
+        <td><%= distrito.id %></td>
+        <td><%= link_to distrito.nombre, distrito_path(distrito) %></td>
+        <td><%= distrito.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_distrito_path(distrito), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', distrito_path(distrito), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_distrito_path, :class => 'btn btn-primary' %>

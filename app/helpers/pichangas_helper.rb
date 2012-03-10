@@ -1,0 +1,2 @@
+module PichangasHelper
+end

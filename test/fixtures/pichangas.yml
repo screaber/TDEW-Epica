@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  nroJugador: 1
+  PrecioCancha: 1
+  FechaInicio: 2012-03-10 09:08:32
+  FechaFin: 2012-03-10 09:08:32
+  comentario: MyString
+  idusuario: 1
+  estado: MyString
+  idusuario: 1
+
+two:
+  titulo: MyString
+  nroJugador: 1
+  PrecioCancha: 1
+  FechaInicio: 2012-03-10 09:08:32
+  FechaFin: 2012-03-10 09:08:32
+  comentario: MyString
+  idusuario: 1
+  estado: MyString
+  idusuario: 1
